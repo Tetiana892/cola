@@ -4,10 +4,14 @@ Author: Ты
 Version: 1.0
 */
 
-
 body {
   padding-top: 146px; /* настрой по высоте хедера */
   margin: 0 auto;
 }
 
+@media (max-width: 768px) {
+body {
+  padding-top: 130px; 
+}
+}
 

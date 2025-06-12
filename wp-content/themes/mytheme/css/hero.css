@@ -1,17 +1,17 @@
 .hero {
   position: relative;
   background: #141429;
-  min-height: 705px;
+  min-height:  705px;
   overflow: hidden;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .hero-title{
-
 font-family: Risque;
 font-weight: 400;
-font-size: 72px;
+font-size: 52px;
 line-height: 100%;
 letter-spacing: 0%;
 color: #FFFFFF;
@@ -20,11 +20,25 @@ color: #FFFFFF;
 .hero-info{
 font-family: Risque;
 font-weight: 400;
-font-size: 38px;
+font-size: 28px;
 line-height: 100%;
 letter-spacing: 0%;
 color: #FFFFFF;
 }
+
+@media (max-width: 768px) {
+.hero {
+  min-height: 845px;
+}
+
+.hero-title{
+font-size: 72px;
+}
+.hero-info{
+font-size: 38px;
+}
+}
+
 
 .hero-btn{
 width: 186px;
@@ -43,31 +57,80 @@ color: #FFFFFF;
 padding: 12px 43px;
 }
 
+.hero-btn:hover {
+  background: #FFFFFF;
+  color: #141429;
+  cursor: pointer;
+ transition: background 0.8s ease, color 0.8s ease;
+}
+
 .hero-content{
-	padding-left: 160px;
+	margin-left: 160px;
     padding-bottom: 188px;
 }
 
+.img-cloud-wrapper {
+  position: absolute;
+    bottom: 26%;
+    left: 65%;
+  transform: translateX(-50%);
+
+  height: auto;
+}
+
+.img-cloud {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-say {
+  position: absolute;
+    top: 44px;
+    left: 60%;;
+  transform: translateX(-50%);
+  color: black; 
+  font-family: Risque;
+  font-weight: 400;
+  font-size: 18px;
+  width: 90%;
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* По умолчанию все показываем */
 .img-dedcola,
 .img-cloud,
+.img-snow,
+.img-arrow {
+  display: block;
+}
+
+/* На мобильных (например, max-width: 768px) */
+@media (max-width: 768px) {
+  .img-dedcola,
+  .img-cloud,
+  .img-snow,
+  .hero-say,
+  .img-arrow {
+    display: none; /* скрыть все кроме деда */
+  }
+}
+
+.img-dedcola,
 .img-snow,
 .img-arrow {
 position: absolute;
 }
 
-
   .img-dedcola {
-    top: 129px;
-    right: 0;
-  }
-
-  .img-cloud {
-    top: 303px;
-    left: 57%;
+	position: relative;
+    top: 65px;
+    left: 0;
   }
 
   .img-snow {
-    top: 221px;
+    top: 30%;
     left: -214px;
   }
 
@@ -76,33 +139,20 @@ position: absolute;
     left: 10%;
     transform: translateX(-50%);
   }
+  
+.img-dedcola-mobile {
+  display: none;
 
-@media (max-width: 1024px) {
-  .hero-title {
-    font-size: 48px;
+}
+
+@media (max-width: 768px) {
+  .img-dedcola-desktop {
+    display: none;
   }
-
-  .hero-info {
-    font-size: 28px;
-  }
-
-  .hero-content {
-    padding-left: 60px;
-  }
-
-  .img-dedcola {
-    left: 60%;
-    top: 100px;
-    width: 150px;
-  }
-
-  .img-cloud {
-    right: 15%;
-    width: 120px;
-  }
-
-  .img-snow {
-    left: -50px;
-    width: 100px;
+  .img-dedcola-mobile {
+    display: block;
+	  position: absolute;
+  left: 102px;
+  bottom: 0;
   }
 }

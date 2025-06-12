@@ -115,6 +115,7 @@ letter-spacing: 0%;
 
 
 .burger {
+  display: block !important;
   position: relative;
   width: 30px;
   height: 30px;
@@ -177,4 +178,10 @@ letter-spacing: 0%;
 .burger.active .icon-close {
   animation: close-show 0.8s ease forwards;
   pointer-events: auto;
+}
+
+@media (max-width: 768px) {
+  .main-nav {
+    display: none;
+  }
 }
