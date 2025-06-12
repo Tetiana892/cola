@@ -1,0 +1,180 @@
+
+/* фиксированный хедер */
+header {
+  position: fixed;
+  top: 32px;
+  left: -23px;
+  height: 70px;
+  width: 100%;
+  background: #141429;
+  z-index: 9999;
+  transition: background-color 0.3s ease;
+  padding: 38px  49px;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+
+.menu a {
+  text-decoration: none !important;
+}
+
+/* логотип */
+.site-logo img {
+  max-height: 50px;
+  height: auto;
+  width: auto;
+  display: block;
+}
+
+.menu-inner{
+	display: flex;
+	align-items: center;
+	gap: 200px;
+}
+
+/* меню */
+.main-nav .menu {
+  list-style: none;
+  display: flex;
+  gap: 60px;
+  padding: 0;
+  margin: 0;
+}
+
+.main-nav .menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  transition: color 0.2s ease;
+}
+
+.main-nav .menu li a:hover {
+  color: #ddd;
+}
+
+.burger-menu {
+  display: none;
+  position: absolute;
+  top: 6%;
+  right: 3%;
+  background: #D02B2B;
+
+  width: 643px;
+  height: 755px;
+  padding: 20px;
+  z-index: 10000;
+}
+
+.burger-menu .menu li a {
+  color: #fff !important;
+  text-decoration: none !important;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+
+font-family: Risque;
+font-weight: 400;
+font-size: 32px;
+line-height: 100%;
+letter-spacing: 0%;
+
+}
+
+.burger-menu.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.burger-menu .menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.burger-menu .menu li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.burger-menu .menu li a {
+  color: #fff !important;
+  text-decoration: none !important;
+  font-family: Roboto, sans-serif;
+  display: block;
+}
+
+
+.burger {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: transparent !important;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-right: 50px;
+  z-index: 10001;
+}
+
+.burger img {
+  position: absolute;
+  top: -10px;
+  left: -49px;
+  width: 60px;
+  height: auto;
+  transition: opacity 0.3s ease;
+  transform-origin: center;
+}
+
+/* Иконка бургер — по умолчанию видна */
+.icon-burger {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 2;
+  transform: scale(1);
+}
+
+/* Иконка крестик — по умолчанию скрыта */
+.icon-close {
+  opacity: 0;
+  pointer-events: none;
+  z-index: 3;
+  transform: scale(1);
+}
+
+/* Анимация исчезновения первой иконки */
+@keyframes close-show {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.4); /* сначала больше */
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.2); /* потом уменьшается до нужного */
+  }
+}
+
+/* При активном классе запускаем анимации */
+.burger.active .icon-burger {
+  animation: burger-hide 0.8s forwards;
+  pointer-events: none;
+}
+
+.burger.active .icon-close {
+  animation: close-show 0.8s ease forwards;
+  pointer-events: auto;
+}
