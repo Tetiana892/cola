@@ -4,16 +4,6 @@
 
 <?php wp_footer(); ?>
 
-<script>
-	const burgerBtn = document.getElementById('burger');
-	const burgerMenu = document.getElementById('burgerMenu');
-
-	burgerBtn.addEventListener('click', function() {
-		this.classList.toggle('active');
-		burgerMenu.classList.toggle('active');
-	});
-</script>
-
 </body>
 
 </html>

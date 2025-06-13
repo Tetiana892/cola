@@ -6,6 +6,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .hero-title{
@@ -29,6 +31,8 @@ color: #FFFFFF;
 @media (max-width: 768px) {
 .hero {
   min-height: 845px;
+  justify-content: center;
+
 }
 
 .hero-title{
@@ -61,14 +65,22 @@ padding: 12px 43px;
   background: #FFFFFF;
   color: #141429;
   cursor: pointer;
- transition: background 0.8s ease, color 0.8s ease;
+  transition: background 0.8s ease, color 0.8s ease;
 }
 
 .hero-content{
 	margin-left: 160px;
     padding-bottom: 188px;
 }
-
+@media (max-width: 768px) {
+	.hero-content{
+    margin: 160px 15px 0 30px;
+    height: 675px;
+}
+    .hero-btn{
+     margin: 43px 124px;
+  }
+}
 .img-cloud-wrapper {
   position: absolute;
     bottom: 26%;
@@ -142,7 +154,6 @@ position: absolute;
   
 .img-dedcola-mobile {
   display: none;
-
 }
 
 @media (max-width: 768px) {
@@ -151,8 +162,30 @@ position: absolute;
   }
   .img-dedcola-mobile {
     display: block;
-	  position: absolute;
-  left: 102px;
-  bottom: 0;
+	position: absolute;
+    left: 0;
+	min-width: 550px;
+     bottom: 0;
   }
+}
+
+.img-cloud-wrapper {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+.img-cloud-wrapper.visible {
+  opacity: 1;
+}
+@keyframes rotate-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.img-snow {
+  animation: rotate-slow 60s linear infinite;
+  transform-origin: center;
 }

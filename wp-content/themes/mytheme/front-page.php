@@ -17,7 +17,9 @@
 			Like it?<br>
 			Scroll down for more !</p>
 	</div>
-
 </section>
+
+<?php get_template_part('template-parts/section', 'gift'); ?>
+<?php get_template_part('template-parts/section', 'form'); ?>
 
 <?php get_footer(); ?>

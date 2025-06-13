@@ -1,0 +1,155 @@
+.gift-section{
+	width: 100%;
+	background: url('../images/bg-gift.jpg') no-repeat center center;
+	background-size: cover;
+}
+
+.container{
+	display: flex;
+	justify-content: space-between;
+	margin-left: 81px;
+	margin-bottom: 160px;
+} 
+
+@media (max-width: 768px) {
+	.container{
+		flex-direction: column;
+		justify-content: center;
+        align-items: center;
+		margin-right: 81px;
+		margin-bottom: 0;
+	} 
+}
+
+.gift-title{
+margin-top: 0;
+font-family: Risque;
+font-weight: 400;
+font-size: 56px;
+line-height: 100%;
+letter-spacing: 0%;
+color: #fff;
+}
+
+@media (max-width: 768px) {
+	.gift-title{
+		margin-top: 120px;
+		font-size: 52px;
+	}
+}
+
+.gift-chose{
+font-family: Risque;
+font-weight: 400;
+font-size: 38px;
+line-height: 100%;
+letter-spacing: 0%;
+color: #fff;
+}
+
+.gift-wrapper{
+	display: flex;
+	gap: 212px;
+}
+  .gift-options {
+	display: flex;
+	gap: 30px;
+  }
+  
+  .gift-item {
+	cursor: pointer;
+	transition:  transform 0.3s;
+}
+
+.gift-item:hover {
+	transform: scale(1.05);
+}
+
+.gift-item.active {
+	transform: scale(1.1);
+}
+
+.present{
+	display: flex;
+    align-items: center;
+	justify-content: center;
+	margin-bottom: 160px;
+	margin-right: 73px;
+	gap: 30px;
+	width: 553px;
+	height: 455px;
+	border: 3px solid #FFFFFF;
+	border-radius: 16px;
+}
+
+@media (max-width: 768px) {
+	.gift-wrapper{
+		align-items: center;
+		justify-content: center;
+	}
+	.present{
+		flex-direction: column-reverse;
+		margin-top: 130px;
+		border: none;
+		margin-right: 0;
+
+	}
+	.img-snow-second{
+		display: none;
+	}
+}
+
+.title-chose{
+font-family: Risque;
+font-weight: 400;
+font-size: 42px;
+line-height: 100%;
+letter-spacing: 0%;
+color: #fff;
+}
+
+.info-chose{
+font-family: Roboto;
+font-weight: 400;
+font-size: 28px;
+line-height: 100%;
+letter-spacing: 0%;
+
+color: #fff;
+}
+
+.wrapper{
+	width: 301px;
+}
+
+.img-snow-second{
+	position: relative;
+	top: -688.23px;
+    left: -292px;	
+}
+
+.img-snow-second {
+	position: relative;
+	top: -125px;
+    left: -200px;
+	transform: rotate(10.8deg);
+	animation: rotateSnow 20s linear infinite;
+	pointer-events: none; /* чтобы не мешала кликам */
+	z-index: 1;
+}
+
+/* Прячем от секции выше */
+.gift-section {
+	position: relative;
+	overflow: hidden;
+}
+
+/* Анимация вращения */
+@keyframes rotateSnow {
+	from {
+		transform: rotate(10.8deg);
+	}
+	to {
+		transform: rotate(370.8deg); /* 360 + 10.8 */
+	}
+}
