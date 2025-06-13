@@ -1,6 +1,12 @@
 <?php get_header(); ?>
 
 <section class="hero">
+	<div class="stars-bg">
+		<?php for ($i = 0; $i < 80; $i++): ?>
+			<div class="star"></div>
+		<?php endfor; ?>
+	</div>
+
 	<div class="hero-content">
 		<h1 class="hero-title">Main Site Title</h1>
 		<h2 class="hero-info">Lorem ipsum descripsum</h2>

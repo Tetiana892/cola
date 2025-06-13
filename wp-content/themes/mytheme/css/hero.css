@@ -1,7 +1,7 @@
 .hero {
   position: relative;
   background: #141429;
-  min-height:  705px;
+  height:  850px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -137,17 +137,17 @@ position: absolute;
 
   .img-dedcola {
 	position: relative;
-    top: 65px;
+    top: 137px;
     left: 0;
   }
 
   .img-snow {
-    top: 30%;
+    top: 36%;
     left: -214px;
   }
 
   .img-arrow {
-    bottom: 30px;
+    bottom: 58px;
     left: 10%;
     transform: translateX(-50%);
   }
@@ -188,4 +188,51 @@ position: absolute;
 .img-snow {
   animation: rotate-slow 60s linear infinite;
   transform-origin: center;
+}
+
+/* зірки */
+.stars-bg {
+  position: absolute;
+	inset: 0;
+	pointer-events: none;
+	z-index: 0;
+	overflow: hidden;
+}
+
+.star {
+	position: absolute;
+	border-radius: 50%;
+	animation: twinkle 2s infinite ease-in-out;
+	opacity: 0.8;
+}
+
+.star-yellow {
+	border-radius: 0; /* Убираем скругление */
+	background-color: yellow !important;
+	clip-path: polygon(
+		50% 0%,
+		61% 35%,
+		98% 35%,
+		68% 57%,
+		79% 91%,
+		50% 70%,
+		21% 91%,
+		32% 57%,
+		2% 35%,
+		39% 35%
+	);
+	box-shadow: 0 0 6px yellow;
+}
+
+/* Мерцание */
+@keyframes twinkle {
+	0%, 100% { opacity: 0.3; }
+	50% { opacity: 1; }
+}
+
+/* Дрожание / плавное движение */
+@keyframes float {
+	0%   { transform: translateY(0) translateX(0); }
+	50%  { transform: translateY(-2px) translateX(1px); }
+	100% { transform: translateY(0) translateX(0); }
 }

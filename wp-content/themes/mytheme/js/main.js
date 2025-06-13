@@ -33,4 +33,26 @@ document.addEventListener("DOMContentLoaded", function () {
 			item.classList.add('active');
 		});
 	});
+
+	// Зірки
+	document.querySelectorAll('.stars-bg .star').forEach(star => {
+		let size = 2 + Math.random() * 6;
+	
+		const isYellow = Math.random() > 0.7;
+		if (isYellow) {
+			size *= 1.5; // увеличиваем размер желтых звездочек в 1.5 раза
+			star.style.backgroundColor = 'yellow';
+			star.classList.add('star-yellow');
+		} else {
+			star.style.backgroundColor = 'white';
+			star.classList.remove('star-yellow');
+		}
+	
+		star.style.width = `${size}px`;
+		star.style.height = `${size}px`;
+		star.style.top = `${Math.random() * 100}%`;
+		star.style.left = `${Math.random() * 100}%`;
+		star.style.animationDelay = `${Math.random() * 5}s`;
+	});
 });
+
