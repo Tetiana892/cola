@@ -63,7 +63,7 @@ header {
 .burger-menu {
   display: none;
   position: absolute;
-  top: 6%;
+  top: 0;
   right: 3%;
   background: #D02B2B;
 

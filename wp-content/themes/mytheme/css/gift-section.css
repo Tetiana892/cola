@@ -8,7 +8,6 @@
 	display: flex;
 	justify-content: space-between;
 	margin-left: 81px;
-	margin-bottom: 160px;
 } 
 
 @media (max-width: 768px) {
@@ -17,7 +16,6 @@
 		justify-content: center;
         align-items: center;
 		margin-right: 81px;
-		margin-bottom: 0;
 	} 
 }
 
@@ -122,34 +120,47 @@ color: #fff;
 	width: 301px;
 }
 
-.img-snow-second{
-	position: relative;
-	top: -688.23px;
-    left: -292px;	
-}
-
-.img-snow-second {
-	position: relative;
-	top: -125px;
-    left: -200px;
-	transform: rotate(10.8deg);
-	animation: rotateSnow 20s linear infinite;
-	pointer-events: none; /* чтобы не мешала кликам */
-	z-index: 1;
-}
 
 /* Прячем от секции выше */
 .gift-section {
 	position: relative;
-	overflow: hidden;
+	z-index: 1;
+	padding: 250px 0 0 0;
 }
 
-/* Анимация вращения */
-@keyframes rotateSnow {
-	from {
-		transform: rotate(10.8deg);
-	}
-	to {
-		transform: rotate(370.8deg); /* 360 + 10.8 */
+@media (max-width: 768px) {
+	.gift-section {
+		padding:50px 0 0 0;
 	}
 }
+
+/*сніг*/
+.snow-wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 9999;
+	overflow: hidden;
+  }
+  
+  .snowflake {
+	position: absolute;
+	top: -10px;
+	background: white;
+	border-radius: 50%;
+	opacity: 0.8;
+	animation-name: fall;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+  }
+  
+  @keyframes fall {
+	to {
+	  transform: translateY(100vh);
+	}
+  }
+  
+  

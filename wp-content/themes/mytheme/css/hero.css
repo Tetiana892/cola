@@ -110,7 +110,7 @@ padding: 12px 43px;
   pointer-events: none;
 }
 
-/* По умолчанию все показываем */
+/* за замовчуванням показуємо все */
 .img-dedcola,
 .img-cloud,
 .img-snow,
@@ -118,14 +118,13 @@ padding: 12px 43px;
   display: block;
 }
 
-/* На мобильных (например, max-width: 768px) */
 @media (max-width: 768px) {
   .img-dedcola,
   .img-cloud,
   .img-snow,
   .hero-say,
   .img-arrow {
-    display: none; /* скрыть все кроме деда */
+    display: none; 
   }
 }
 
@@ -135,6 +134,10 @@ padding: 12px 43px;
 position: absolute;
 }
 
+.img-arrow{
+  top: 758px;
+  left: 139px;
+}
   .img-dedcola {
 	position: relative;
     top: 137px;
@@ -142,14 +145,19 @@ position: absolute;
   }
 
   .img-snow {
+    position: fixed;
     top: 36%;
     left: -214px;
+    transition: top 0.5s ease, left 0.5s ease;
   }
 
-  .img-arrow {
-    bottom: 58px;
-    left: 10%;
-    transform: translateX(-50%);
+  .img-snow {
+    position: absolute;
+    top: 344px;
+    left: -211px;
+    transition: top 0.5s ease, left 0.5s ease;
+    z-index: 10;
+    pointer-events: none;
   }
   
 .img-dedcola-mobile {
@@ -207,7 +215,7 @@ position: absolute;
 }
 
 .star-yellow {
-	border-radius: 0; /* Убираем скругление */
+	border-radius: 0;
 	background-color: yellow !important;
 	clip-path: polygon(
 		50% 0%,
@@ -224,13 +232,13 @@ position: absolute;
 	box-shadow: 0 0 6px yellow;
 }
 
-/* Мерцание */
+/* Мерехтіння */
 @keyframes twinkle {
 	0%, 100% { opacity: 0.3; }
 	50% { opacity: 1; }
 }
 
-/* Дрожание / плавное движение */
+/*  плавність руху */
 @keyframes float {
 	0%   { transform: translateY(0) translateX(0); }
 	50%  { transform: translateY(-2px) translateX(1px); }

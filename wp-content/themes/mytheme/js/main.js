@@ -10,12 +10,12 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 	}
 
-	// Показ облака
+	// Показ хмарки
 	setTimeout(function () {
 		document.querySelector('.img-cloud-wrapper')?.classList.add('visible');
 	}, 3000);
 
-	// Подарки
+	// Подарунки
 	document.querySelectorAll('.gift-item').forEach(item => {
 		item.addEventListener('click', () => {
 			const title = item.getAttribute('data-title');
@@ -36,17 +36,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	// Зірки
 	document.querySelectorAll('.stars-bg .star').forEach(star => {
-		let size = 2 + Math.random() * 6;
+		let size = (2 + Math.random() * 6) * 1.5;
 	
-		const isYellow = Math.random() > 0.7;
-		if (isYellow) {
-			size *= 1.5; // увеличиваем размер желтых звездочек в 1.5 раза
-			star.style.backgroundColor = 'yellow';
-			star.classList.add('star-yellow');
-		} else {
-			star.style.backgroundColor = 'white';
-			star.classList.remove('star-yellow');
-		}
+		star.style.backgroundColor = 'yellow';
+		star.classList.add('star-yellow');
 	
 		star.style.width = `${size}px`;
 		star.style.height = `${size}px`;
@@ -54,5 +47,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		star.style.left = `${Math.random() * 100}%`;
 		star.style.animationDelay = `${Math.random() * 5}s`;
 	});
+
 });
 

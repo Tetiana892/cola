@@ -1,5 +1,5 @@
 <section class="gift-section">
-	<img src="<?php echo get_template_directory_uri(); ?>/images/snow.png" alt="snow" class="img-snow-second">
+	<div class="snow-wrapper" aria-hidden="true"></div>
 	<div class="container">
 		<div class="gift-wrapper">
 			<div>
