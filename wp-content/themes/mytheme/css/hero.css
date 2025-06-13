@@ -1,7 +1,7 @@
 .hero {
   position: relative;
   background: #141429;
-  height:  850px;
+  height: 887px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -30,7 +30,7 @@ color: #FFFFFF;
 
 @media (max-width: 768px) {
 .hero {
-  min-height: 845px;
+  min-height: 1075px;
   justify-content: center;
 
 }
@@ -70,8 +70,8 @@ padding: 12px 43px;
 
 .hero-content{
 	margin-left: 160px;
-    padding-bottom: 188px;
 }
+
 @media (max-width: 768px) {
 	.hero-content{
     margin: 160px 15px 0 30px;
@@ -140,7 +140,7 @@ position: absolute;
 }
   .img-dedcola {
 	position: relative;
-    top: 137px;
+    top: 154px;
     left: 0;
   }
 

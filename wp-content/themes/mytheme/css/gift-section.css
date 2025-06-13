@@ -1,5 +1,6 @@
 .gift-section{
 	width: 100%;
+	height: 887px;
 	background: url('../images/bg-gift.jpg') no-repeat center center;
 	background-size: cover;
 }
@@ -121,11 +122,11 @@ color: #fff;
 }
 
 
-/* Прячем от секции выше */
 .gift-section {
 	position: relative;
 	z-index: 1;
-	padding: 250px 0 0 0;
+	padding: 50px 0;
+    height: 1175px;
 }
 
 @media (max-width: 768px) {

@@ -1,0 +1,12 @@
+.form-section{
+	width: 100%;
+	height: 887px;
+	background: url('../images/deer.jpg') no-repeat center center;
+	background-size: cover;
+}
+
+@media (max-width: 768px) {
+	.form-section{
+	height: 1175px;
+	}
+}

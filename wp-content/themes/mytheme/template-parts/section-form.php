@@ -1,5 +1,5 @@
 <section class="form-section">
-	<div class="container">
+	<div class="">
 		<h2 class="form-title">Заповни форму і отримай подарунок</h2>
 		<form class="gift-form">
 			<input type="text" name="name" placeholder="Ім'я" required>

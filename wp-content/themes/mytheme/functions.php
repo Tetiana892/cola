@@ -25,6 +25,7 @@ function mytheme_enqueue_all_styles()
 	if (is_front_page()) {
 		wp_enqueue_style('front-page-style', get_template_directory_uri() . '/css/hero.css', ['mytheme-style'], '1.0');
 		wp_enqueue_style('mytheme-gift-section', get_template_directory_uri() . '/css/gift-section.css', [], '1.0');
+		wp_enqueue_style('mytheme-form-section', get_template_directory_uri() . '/css/form-section.css', [], '1.0');
 	}
 }
 add_action('wp_enqueue_scripts', 'mytheme_enqueue_all_styles');
