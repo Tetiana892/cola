@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
-<main>
-	<h2>Привет, это моя тема!</h2>
-	<p>Это контент главной страницы.</p>
+<main style="background-color: black;">
+	<h2>Hello, this is my topic!</h2>
+	<p>This is the content of the main page.</p>
 </main>
 
 <?php get_footer(); ?>

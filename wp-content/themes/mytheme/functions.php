@@ -11,8 +11,16 @@ add_action('after_setup_theme', 'register_my_menus');
 function theme_scripts()
 {
 	wp_enqueue_script('theme-main-js', get_template_directory_uri() . '/js/main.js', [], null, true);
-	// Подключение snow.js
+	// підключення snow.js
 	wp_enqueue_script('theme-snow-js', get_template_directory_uri() . '/js/snow.js', [], null, true);
+	// кастомний селект
+	wp_enqueue_script(
+		'custom-select',
+		get_template_directory_uri() . '/js/custom-select.js',
+		array(),
+		null,
+		true
+	);
 }
 add_action('wp_enqueue_scripts', 'theme_scripts');
 

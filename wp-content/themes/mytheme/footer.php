@@ -1,5 +1,5 @@
 <footer>
-	<p>© <?php echo date('Y'); ?> Мой сайт на WordPress</p>
+	<p>© <?php echo date('Y'); ?>My site is on WordPress</p>
 </footer>
 
 <?php wp_footer(); ?>

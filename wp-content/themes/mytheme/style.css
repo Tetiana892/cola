@@ -8,4 +8,11 @@ body {
   margin: 0 auto;
 }
 
-
+footer{
+  display: flex;
+  flex-direction: row-reverse;
+  background: #141429;
+  color: #fff;
+  margin: 0 auto;
+  padding: 20px;
+}
