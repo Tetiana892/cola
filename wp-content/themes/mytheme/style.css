@@ -16,3 +16,9 @@ footer{
   margin: 0 auto;
   padding: 20px;
 }
+
+html, body, .swiper-container, .swiper-wrapper, .swiper-slide {
+  height: 887px;
+  margin: 0;
+  padding: 0;
+}

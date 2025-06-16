@@ -21,6 +21,7 @@ function theme_scripts()
 		null,
 		true
 	);
+	wp_enqueue_script('swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js', [], null, true);
 }
 add_action('wp_enqueue_scripts', 'theme_scripts');
 
